@@ -1,9 +1,8 @@
-# need to use sudo-enabled containers for additional RAM
 sudo: required
 language: java
 jdk: oraclejdk12
 python:
-  - "3.6"
+  - "3.7.4"
 before_script:
   - export WYVERN_HOME="$(pwd)"
   - export _JAVA_OPTIONS="-Xmx6144m -Xms512m"
