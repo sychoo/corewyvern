@@ -1,0 +1,4 @@
+- CopperRuntime.jar
+  - Purpose: A parser and a scanner generator, context-aware
+  - Last Modified: 2019-07-24 01:50
+  - Website: http://melt.cs.umn.edu/copper/

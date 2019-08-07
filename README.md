@@ -20,6 +20,9 @@ Installation
 ------------
 Installation documentation is coming soon...
 
+Documentation
+-------------
+
 Contributing
 ------------
 If you would like to contribute to Core Wyvern, please read the existing documentation and build the programming language on your machine. If you would like to contribute to Wyvern programming language, please refer to [Wyvern's GitHub repository](https://https://github.com/wyvernlang/wyvern). If you have questions pertaining to Core Wyvern Project please contact cchu2@andrew.cmu.edu. If you have questions pertaining to the Wyvern Project, please contact jonathan.aldrich@cs.cmu.edu

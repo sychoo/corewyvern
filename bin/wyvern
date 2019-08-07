@@ -1,0 +1,35 @@
+#!/bin/bash
+# Wyvern Programming Language command-line interpreter
+
+# OS specific support, check if user is using Cygwin
+cygwin=false;
+case "`uname`" in
+  CYGWIN*) cygwin=true ;;
+esac
+
+# get the source location of the current bash script
+SCRIPT_PATH="$BASH_SOURCE"  
+
+# get the relative path of Wyvern home directory, assuming script is in bin/ directory
+WYVERN_HOME=`dirname "$SCRIPT_PATH"`/..
+
+# get the absolute path of Wyvern home directory
+WYVERN_HOME=`cd "$WYVERN_HOME" > /dev/null && pwd`
+
+# copy the Wyvern home directory
+WYVERN_HOME_DUPLICATE="$WYVERN_HOME" 
+
+# for cygwin (Windows), convert the Wyvern classpath home directory to Windows format
+if $cygwin ; then
+  WYVERN_HOME_DUPLICATE=`cygpath --windows "$WYVERN_HOME_DUPLICATE"`
+  WYV_CLASSPATH="$WYVERN_HOME_DUPLICATE/tools/build;$WYVERN_HOME_DUPLICATE/tools/bin;$WYVERN_HOME_DUPLICATE/tools/lib/CopperRuntime.jar;$WYVERN_HOME_DUPLICATE/tools/lib/asm-debug-all-5.0.1.jar;$WYVERN_HOME_DUPLICATE/tools/lib/junit-4.11.jar;$WYVERN_HOME_DUPLICATE/tools/lib/protobuf-java-3.5.1.jar"
+
+# for Linux operating systems, convert to the Wyvern classpath to Linux format
+else
+  WYV_CLASSPATH="$WYVERN_HOME_DUPLICATE/tools/build:$WYVERN_HOME_DUPLICATE/tools/bin:$WYVERN_HOME_DUPLICATE/tools/lib/CopperRuntime.jar:$WYVERN_HOME_DUPLICATE/tools/lib/asm-debug-all-5.0.1.jar:$WYVERN_HOME_DUPLICATE/tools/lib/junit-4.11.jar:$WYVERN_HOME_DUPLICATE/tools/lib/protobuf-java-3.5.1.jar"
+fi
+
+export WYVERN_HOME="$WYVERN_HOME_DUPLICATE" # set environment variable WYVERN_HOME
+
+# set the memory allocation pool to 6 GB (6144 MB)
+java -Xmx6144m -classpath "$WYV_CLASSPATH" wyvern.tools.Interpreter $*
