@@ -1,5 +1,5 @@
 #!/bin/bash
-# Wyvern Programming Language command-line interpreter
+# Wyvern Programming Language Command-line Interpreter
 
 # OS specific support, check if user is using Cygwin
 cygwin=false;
