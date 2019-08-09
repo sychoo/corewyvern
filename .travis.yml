@@ -3,11 +3,22 @@ language: java
 jdk: oraclejdk12
 python:
   - "3.7.4"
+cache:
+  directories:
+    - "backend/node_modules"
+install:
+  - cd backend
+  - npm install
+  - cd ..
 before_script:
   - export WYVERN_HOME="$(pwd)"
   - export _JAVA_OPTIONS="-Xmx6144m -Xms512m"
 script:
-  - echo "hello"
+  - cd tools
+  - ant test
+  - cd ../backend
+  - ./bootstrap.sh travis
+  - ./test.sh
 notifications:
   email:
     recipients:

@@ -25,135 +25,137 @@ public interface WyvernParserConstants {
   /** RegularExpression Id. */
   int CLASS = 7;
   /** RegularExpression Id. */
-  int FORWARD = 8;
+  int REC = 8;
   /** RegularExpression Id. */
-  int TO = 9;
+  int FORWARD = 9;
   /** RegularExpression Id. */
-  int REQUIRE = 10;
+  int TO = 10;
   /** RegularExpression Id. */
-  int METADATA = 11;
+  int REQUIRE = 11;
   /** RegularExpression Id. */
-  int NEW = 12;
+  int METADATA = 12;
   /** RegularExpression Id. */
-  int MODULE = 13;
+  int NEW = 13;
   /** RegularExpression Id. */
-  int COMPRISES = 14;
+  int MODULE = 14;
   /** RegularExpression Id. */
-  int EXTENDS = 15;
+  int COMPRISES = 15;
   /** RegularExpression Id. */
-  int TAGGED = 16;
+  int EXTENDS = 16;
   /** RegularExpression Id. */
-  int MATCH = 17;
+  int TAGGED = 17;
   /** RegularExpression Id. */
-  int IMPORT = 18;
+  int MATCH = 18;
   /** RegularExpression Id. */
-  int LIFTED = 19;
+  int IMPORT = 19;
   /** RegularExpression Id. */
-  int DEFLT = 20;
+  int LIFTED = 20;
   /** RegularExpression Id. */
-  int RESOURCE = 21;
+  int DEFLT = 21;
   /** RegularExpression Id. */
-  int INSTANTIATE = 22;
+  int RESOURCE = 22;
   /** RegularExpression Id. */
-  int AS = 23;
+  int INSTANTIATE = 23;
   /** RegularExpression Id. */
-  int EFFECT = 24;
+  int AS = 24;
   /** RegularExpression Id. */
-  int RECUR = 25;
+  int EFFECT = 25;
   /** RegularExpression Id. */
-  int SINGLE_LINE_COMMENT = 26;
+  int RECUR = 26;
   /** RegularExpression Id. */
-  int MULTI_LINE_COMMENT = 27;
+  int SINGLE_LINE_COMMENT = 27;
   /** RegularExpression Id. */
-  int WHITESPACE = 28;
+  int MULTI_LINE_COMMENT = 28;
   /** RegularExpression Id. */
-  int NEWLINE = 29;
+  int WHITESPACE = 29;
   /** RegularExpression Id. */
-  int INDENT = 30;
+  int NEWLINE = 30;
   /** RegularExpression Id. */
-  int DEDENT = 31;
+  int INDENT = 31;
   /** RegularExpression Id. */
-  int DSLLINE = 32;
+  int DEDENT = 32;
   /** RegularExpression Id. */
-  int IDENTIFIER = 33;
+  int DSLLINE = 33;
   /** RegularExpression Id. */
-  int LPAREN = 34;
+  int IDENTIFIER = 34;
   /** RegularExpression Id. */
-  int RPAREN = 35;
+  int LPAREN = 35;
   /** RegularExpression Id. */
-  int TILDE = 36;
+  int RPAREN = 36;
   /** RegularExpression Id. */
-  int PLUS = 37;
+  int TILDE = 37;
   /** RegularExpression Id. */
-  int DASH = 38;
+  int PLUS = 38;
   /** RegularExpression Id. */
-  int MULT = 39;
+  int DASH = 39;
   /** RegularExpression Id. */
-  int DIVIDE = 40;
+  int MULT = 40;
   /** RegularExpression Id. */
-  int MOD = 41;
+  int DIVIDE = 41;
   /** RegularExpression Id. */
-  int EQUALS = 42;
+  int MOD = 42;
   /** RegularExpression Id. */
-  int EQUALSEQUALS = 43;
+  int EQUALS = 43;
   /** RegularExpression Id. */
-  int GE = 44;
+  int EQUALSEQUALS = 44;
   /** RegularExpression Id. */
-  int LE = 45;
+  int GE = 45;
   /** RegularExpression Id. */
-  int NOTEQUALS = 46;
+  int LE = 46;
   /** RegularExpression Id. */
-  int COMMA = 47;
+  int NOTEQUALS = 47;
   /** RegularExpression Id. */
-  int EQARROW = 48;
+  int COMMA = 48;
   /** RegularExpression Id. */
-  int TARROW = 49;
+  int EQARROW = 49;
   /** RegularExpression Id. */
-  int DOT = 50;
+  int TARROW = 50;
   /** RegularExpression Id. */
-  int COLON = 51;
+  int DOT = 51;
   /** RegularExpression Id. */
-  int POUND = 52;
+  int COLON = 52;
   /** RegularExpression Id. */
-  int QUESTION = 53;
+  int POUND = 53;
   /** RegularExpression Id. */
-  int BAR = 54;
+  int QUESTION = 54;
   /** RegularExpression Id. */
-  int AND = 55;
+  int BAR = 55;
   /** RegularExpression Id. */
-  int GT = 56;
+  int AND = 56;
   /** RegularExpression Id. */
-  int LT = 57;
+  int GT = 57;
   /** RegularExpression Id. */
-  int LBRACK = 58;
+  int LT = 58;
   /** RegularExpression Id. */
-  int RBRACK = 59;
+  int LBRACK = 59;
   /** RegularExpression Id. */
-  int LBRACE = 60;
+  int RBRACK = 60;
   /** RegularExpression Id. */
-  int RBRACE = 61;
+  int LBRACE = 61;
   /** RegularExpression Id. */
-  int BOOLEANAND = 62;
+  int RBRACE = 62;
   /** RegularExpression Id. */
-  int BOOLEANOR = 63;
+  int BOOLEANAND = 63;
   /** RegularExpression Id. */
-  int BOOLEANNOT = 64;
+  int BOOLEANOR = 64;
   /** RegularExpression Id. */
-  int STRING_LITERAL = 65;
+  int BOOLEANNOT = 65;
   /** RegularExpression Id. */
-  int CHARACTER_LITERAL = 66;
+  int STRING_LITERAL = 66;
   /** RegularExpression Id. */
-  int FLOATING_POINT_LITERAL = 67;
+  int CHARACTER_LITERAL = 67;
   /** RegularExpression Id. */
-  int DECIMAL_LITERAL = 68;
+  int FLOATING_POINT_LITERAL = 68;
   /** RegularExpression Id. */
-  int BOOLEAN_LITERAL = 69;
+  int DECIMAL_LITERAL = 69;
   /** RegularExpression Id. */
-  int RATIONAL_LITERAL = 70;
+  int BOOLEAN_LITERAL = 70;
   /** RegularExpression Id. */
-  int DSL_LITERAL = 71;
+  int RATIONAL_LITERAL = 71;
   /** RegularExpression Id. */
-  int ARROW = 72;
+  int DSL_LITERAL = 72;
+  /** RegularExpression Id. */
+  int ARROW = 73;
 
   /** Literal token values. */
   String[] tokenImage = {
@@ -168,6 +170,7 @@ public interface WyvernParserConstants {
     "\"assert\"",
     "\"datatype\"",
     "\"class\"",
+    "\"rec\"",
     "\"forward\"",
     "\"to\"",
     "\"require\"",

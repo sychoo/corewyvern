@@ -1,10 +1,13 @@
+// specify package
 package wyvern.tools;
 
+// import Java standard libraries
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+// import Wyvern standard libraries
 import wyvern.stdlib.Globals;
 import wyvern.target.corewyvernIL.ASTNode;
 import wyvern.target.corewyvernIL.astvisitor.PlatformSpecializationVisitor;
@@ -16,13 +19,9 @@ import wyvern.target.corewyvernIL.support.TypeContext;
 import wyvern.tools.errors.ToolError;
 
 public final class Interpreter {
+
     private Interpreter() { }
-    /**
-     * The interpreter only supports 1 argument, which is the path to the Wyvern
-     * file. If more arguments are supplied, it will exit with an error. Then,
-     * the file is read in to memory in it's entirety, before being executed in
-     * an empty context. The resulting value is printed to the screen.
-     */
+
     public static void main(String[] args) {
         // check if 1 argument is supplied.
         if (args.length != 1) {
@@ -81,15 +80,10 @@ public final class Interpreter {
             program = state.getResolver().wrap(program, m.getDependencies());
             program = (IExpr) PlatformSpecializationVisitor.specializeAST((ASTNode) program, "java", Globals.getGenContext(state));
 
-            /*ExpressionAST ast = (ExpressionAST) TestUtil.getNewAST(filepath.toFile());
-            GenContext genCtx = Globals.getGenContext(state);
-            Expression program = ast.generateIL(genCtx, null);*/
             TypeContext ctx = Globals.getStandardTypeContext();
             program.typecheckNoAvoidance(ctx, null);
             TailCallVisitor.annotate(program);
             program.interpret(Globals.getStandardEvalContext());
-        /*} catch (ParseException e) {
-            System.err.println("Parse error: " + e.getMessage());*/
         } catch (ToolError e) {
             System.err.println(e.getMessage());
             System.exit(1);
