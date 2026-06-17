@@ -5,7 +5,7 @@
   "main": "",
   "directories": {},
   "dependencies": {
-    "protobufjs": "^6.8.6",
+    "protobufjs": "^7.6.3",
     "sprintf-js": "^1.1.1"
   },
   "devDependencies": {},
